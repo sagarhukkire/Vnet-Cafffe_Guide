@@ -10,20 +10,13 @@ Lets get into topic
 5. Either do cmake or make to install and compile ,there is chance that after make runtest you may get error
  '''
  Check failed: ExactNumBottomBlobs() == bottom.size() (3 vs. 2) SoftmaxWithLoss Layer takes 3 bottom blob(s) as input.
- ## ExactNumBottomBlobs is set to be 3 in the loss_layer.hpp.
+ ExactNumBottomBlobs is set to be 3 in the loss_layer.hpp.
  '''
  'change it to 2 simple isn't it?'
 'make sure you have installed 3D caffe correctly then you are ready to go'
 6. then download Vnet from 
 (https://github.com/faustomilletari/VNet)
-7. go to main.py ,just create folder structure accordingly 
-.. for example
- ..1. in train folder keep data
- ..1. subject123.mhd (main volume)
- ..1. subject123_segmentation.mhd(label volume)
- ..1. same for test folder
- ..1. subject456.mhd 
- ..1. subject456_segmentation.mhd' 
+7. go to main.py ,just create folder structure accordingly(train,test,results,snapshots) 
 8. if you are using pycharm give system parameter ,-train or -test as per your need
 9. if there is out of memory error coming then check 'nvidia-smi' if you are using GPU on server or reduce the data
 10. Vnet converges early ,so I do not think we should train for 100000 iteration as I got nice results for 30000 then change step size
