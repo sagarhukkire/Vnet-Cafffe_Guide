@@ -1,4 +1,4 @@
-Hello All !! First of welcome to this guide. This are my experinces with 3D image segmentation ,Vnet and caffe
+Hello All !! First of welcome to this guide. These are my experinces with 3D image segmentation ,Vnet and caffe
 ...Hope they will be useful to you.
 Lets get into topic
 1. First to use Vnet ,which kind of data you have ? medical images(volumes) in 3D, lables (that too volume in 3D, created by some tool by hand)
