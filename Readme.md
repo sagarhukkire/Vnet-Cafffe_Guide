@@ -8,11 +8,11 @@ Lets get into topic
 4. first download 3 D caffe
 (https://github.com/faustomilletari/3D-Caffe)
 5. Either do cmake or make to install and compile ,there is chance that after make runtest you may get error
+### Check failed: ExactNumBottomBlobs() == bottom.size() (3 vs. 2) SoftmaxWithLoss Layer takes 3 bottom blob(s) as input.
+###ExactNumBottomBlobs is set to be 3 in the loss_layer.hpp.
  '''
- Check failed: ExactNumBottomBlobs() == bottom.size() (3 vs. 2) SoftmaxWithLoss Layer takes 3 bottom blob(s) as input.
- ExactNumBottomBlobs is set to be 3 in the loss_layer.hpp.
+ change it to 2 simple isn't it?
  '''
- 'change it to 2 simple isn't it?'
 'make sure you have installed 3D caffe correctly then you are ready to go'
 6. then download Vnet from 
 (https://github.com/faustomilletari/VNet)
