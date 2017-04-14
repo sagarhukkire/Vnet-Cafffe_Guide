@@ -1,4 +1,4 @@
-Hello All !! First of welcome to this guide. These are my experinces with 3D image segmentation ,Vnet and caffe
+Hello All !! First of all welcome to this guide. These are my experiences with 3D image segmentation ,Vnet and caffe
 Hope they will be useful to you.
 Let's get into topic:
 1. First to use Vnet ,which kind of data you have ? medical images(volumes) in 3D, lables (that too volume in 3D, created by some tool by hand)
@@ -7,8 +7,10 @@ Let's get into topic:
 #so we are now ready with data
 4. first download 3 D caffe (https://github.com/faustomilletari/3D-Caffe)
 5. Either do cmake or make to install and compile ,there is chance that after make runtest you may get error
+'''
 #Check failed: ExactNumBottomBlobs() == bottom.size() (3 vs. 2) SoftmaxWithLoss Layer takes 3 bottom blob(s) as input.
 #ExactNumBottomBlobs is set to be 3 in the loss_layer.hpp.
+'''
 ***change it to 2 simple isn't it?***
 6. make sure you have installed 3D caffe correctly then you are ready to go
 6. then download Vnet from (https://github.com/faustomilletari/VNet)
