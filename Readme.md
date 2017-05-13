@@ -31,5 +31,11 @@ Let's get into topic:
 * press g to generate
 * make all
 
+## Hope you guys are now okay  with installation ,proper dataset and all ,let me put my experinces of my project  with Vnet,which is on way to completion
+* When you are using dice loss , and your batch size is 1,2,..etc. make sure to normalize it in pylayer.py ,eitherwise caffe calculate dice loss for each volume in batch ,so instead of converging loss to 1.0 ,it goes beyond that its confusing  to understand,so please normalize (check closed issues ,there is code for it) 
+* Vnet work indeed great with dice loss , but to verify your network with weighted cross entropy (U-Net has implemented it) I recommend [https://github.com/gustavla/caffe-weighted-samples] ,it has helped me to get better result too :),yes you have to add few c++ and cu files and do necessary changes, recompile again ,if you want to try weighted cross entropy
+* One Note, if you see Vnet input size is 128x128x64 , and resoution too, sometimes our images does not fit to it, so your quality measures like Dice ,Jaccard result into low value, do not afraid for that. I have invested around 15 days to find out the solution, here it is. If you see your segmentation mask ,you can see there might be cuts, or full image is not available at output of network. So either pass subject of intrest  of image by cropping (taking bounding box) or add many zeros around axis and downsample (its easy one but not good quality results )
+
+All the best
 Thanks
 
